@@ -126,6 +126,7 @@ if data is not None and not data.empty:
         - Recent Closing Prices: {data['Close'].tail(5).to_numpy().flatten().tolist()}
         - Support Line: {str(fib_values[0])}
         - Resistance Line: {str(fib_values[-1])}
+        - Fibonacci Retracement Values: {fib_values}
 
         Consider both short-term (next week) and long-term (next quarter) factors.
         Provide your response in the following format:
