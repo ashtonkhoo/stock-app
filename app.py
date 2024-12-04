@@ -18,15 +18,13 @@ client = AzureOpenAI(
     azure_endpoint=os.getenv("AZURE_OPENAI_ENDPOINT")
 )
 
+# Page Title and Content Title
 st.set_page_config(page_title="LLM Stock Prediction")
-
-# Title and instructions
-st.title("LLM-Powered Stock and Crypto Predictor")
+st.title("LLM-Powered Stock/Crypto App:chart_with_upwards_trend:")
 
 # Sidebar for ticker selection
-ticker = st.sidebar.text_input("Enter Ticker Symbol", value="BTC-USD")
-interval = st.sidebar.text_input("Enter Interval", value="5m")
-st.sidebar.markdown("[Click here for full list of tickers](https://finance.yahoo.com/lookup/)")
+ticker = st.sidebar.text_input("Enter Ticker Symbol ([Click here for tickers list](https://finance.yahoo.com/lookup/))", value="BTC-USD")
+interval = st.sidebar.text_input("Enter Data Interval", value="15m")
 days_to_fetch = st.sidebar.slider("Days of data to fetch", min_value=1, max_value=59, value=3)
 
 # Fetch data
