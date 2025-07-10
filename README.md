@@ -32,8 +32,8 @@ Follow these steps to set up the project on your local machine:
 
 1. **Clone the Repository**
    ```bash
-   git clone <repository-url>
-   cd <repository-folder>
+   git clone https://github.com/ashtonkhoo/stock-app.git
+   cd stock-app
    ```
 
 2. **Set Up Python Environment**
